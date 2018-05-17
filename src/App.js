@@ -28,16 +28,20 @@ class App extends Component {
                 }
     }
   }
+  this.searchWeather = this.searchWeather.bind(this);
 }
 
   searchWeather(searchValue){
     Geocoder.search(searchValue)
     .then( location => {
-      DarkSky.search(location)
+      DarkSky.search(location).then(weather =>{
+        this.setState({weather: weather})
+      })
     });
   }
 
   render() {
+    console.log(this.state)
     return (
       <div className="App">
         <WeatherDisplay weather={this.state.weather}/>

@@ -11,7 +11,8 @@ const DarkSky = {
       }
   })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => data)
+    .catch(error => console.log('To Fix CORS error add this extention to chrome: https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi'))
   }
 }
 
