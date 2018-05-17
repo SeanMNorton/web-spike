@@ -6,9 +6,9 @@ class WeatherDisplay extends Component {
 
   renderWeather(){
     const {weather} = this.props;
-    if (this.props.weather.hourly) {
+    if (weather.hourly) {
       return (
-        <div className='container'>
+        <div id='weather-data' className='container'>
           <div className='icon'> {weather.minutely.icon} </div>
           <div className='temp'> {weather.hourly.data[0].temperature}</div>
           <div className='weather-summary'> {weather.minutely.summary} </div>
@@ -16,7 +16,7 @@ class WeatherDisplay extends Component {
       )
     } else {
       return (
-        <div className='container'>
+        <div id='weather-data' className='container'>
           <div className='no-weather'>No Weather Yet.</div>
         </div>
       )
