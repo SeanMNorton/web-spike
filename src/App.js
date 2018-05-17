@@ -29,11 +29,15 @@ class App extends Component {
   }
 }
 
+  searchWeather(searchValue){
+    console.log(searchValue);
+  }
+
   render() {
     return (
       <div className="App">
         <WeatherDisplay weather={this.state.weather}/>
-        <WeatherForm />
+        <WeatherForm searchWeather={this.searchWeather} />
       </div>
     );
   }
