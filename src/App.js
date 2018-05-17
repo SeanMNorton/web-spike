@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import WeatherDisplay from './Components/WeatherDisplay/WeatherDisplay';
 import WeatherForm from './Components/WeatherForm/WeatherForm';
-
+import Geocoder from './util/Geocoder';
 
 import './App.css';
 
@@ -20,7 +20,7 @@ class App extends Component {
                       "icon": "partly-cloudy-night",
                       "precipIntensity": 0,
                       "precipProbability": 0,
-                      "temperature": 22.8,
+                      "temperature": 22.0,
                       "apparentTemperature": 16.46
                     }
                   ]
@@ -30,7 +30,10 @@ class App extends Component {
 }
 
   searchWeather(searchValue){
-    console.log(searchValue);
+    Geocoder.search(searchValue)
+    .then( location => {
+      console.log(location)
+    });
   }
 
   render() {

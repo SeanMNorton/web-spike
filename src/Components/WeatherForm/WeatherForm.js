@@ -22,7 +22,7 @@ class WeatherForm extends Component {
   render() {
     return (
       <div className="weather-form">
-        <input onChange={this.handleChange} placeholder="City, Sate or ZipCode" />
+        <input onChange={this.handleChange} type='number' placeholder='ZipCode' />
         <button onClick={this.handleClick}>Submit</button>
       </div>
     );
