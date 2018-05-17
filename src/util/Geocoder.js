@@ -3,8 +3,8 @@ const url = `https://maps.googleapis.com/maps/api/geocode/json?key=${geocoder_ke
 
 const Geocoder = {
 
-  search(address){
-    return fetch(url+address)
+  search(zipCode){
+    return fetch(url+zipCode)
     .then(response => response.json())
     .then(data => data.results[0].geometry.location)
   }

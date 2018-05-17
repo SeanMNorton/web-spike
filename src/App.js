@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import WeatherDisplay from './Components/WeatherDisplay/WeatherDisplay';
 import WeatherForm from './Components/WeatherForm/WeatherForm';
 import Geocoder from './util/Geocoder';
+import DarkSky from './util/DarkSky';
 
 import './App.css';
 
@@ -32,7 +33,7 @@ class App extends Component {
   searchWeather(searchValue){
     Geocoder.search(searchValue)
     .then( location => {
-      console.log(location)
+      DarkSky.search(location)
     });
   }
 
