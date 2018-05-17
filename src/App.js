@@ -9,24 +9,8 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state ={
-      weather: {
-        "hourly": {
-                  "summary": "Snow (6–9 in.) and windy starting in the afternoon.",
-                  "icon": "snow",
-                  "data": [
-                    {
-                      "time": 255589200,
-                      "summary": "Mostly Cloudy",
-                      "icon": "partly-cloudy-night",
-                      "precipIntensity": 0,
-                      "precipProbability": 0,
-                      "temperature": 22.0,
-                      "apparentTemperature": 16.46
-                    }
-                  ]
-                }
-    }
+    this.state = {
+      weather: {}
   }
   this.searchWeather = this.searchWeather.bind(this);
 }
@@ -41,7 +25,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="App">
         <WeatherDisplay weather={this.state.weather}/>
