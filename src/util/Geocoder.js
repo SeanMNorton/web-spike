@@ -1,4 +1,4 @@
-const geocoder_key = process.env.REACT_APP_GEOCODER_API_KEY;
+const geocoder_key = process.env.REACT_APP_GOOGLE_API_KEY;
 const url = `https://maps.googleapis.com/maps/api/geocode/json?key=${geocoder_key}&address=`
 
 const Geocoder = {

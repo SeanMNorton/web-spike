@@ -16,8 +16,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ type: '*/*' }));
 
 app.get('/darksky/', (req, res) => {
-	const locationsObj = req.query;
-	fetch(`${url}${locationsObj.lat},${locationsObj.lng}`)
+	const { lat, lng } = req.query;
+	fetch(`${url}${lat},${lng}`)
 	  .then(response => response.json())
 	  .then(data => {
 	  	res.send(data);
