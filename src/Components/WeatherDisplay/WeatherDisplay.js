@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Icon from '../Skycons/Skycons';
 import './WeatherDisplay.css';
 
 class WeatherDisplay extends Component {
@@ -8,9 +8,11 @@ class WeatherDisplay extends Component {
     const {weather} = this.props;
     if (weather.hourly) {
       return (
-        <div id='weather-data' className='container'>
-          <div className='icon'> {weather.minutely.icon} </div>
-          <div className='temp'> {weather.hourly.data[0].temperature}</div>
+        <div id='weather-data'>
+          <div className='flex-container'>
+            <Icon iconName={weather.minutely.icon} />
+            <div className='temp'> {weather.hourly.data[0].temperature}</div>
+          </div>
           <div className='weather-summary'> {weather.minutely.summary} </div>
         </div>
       )

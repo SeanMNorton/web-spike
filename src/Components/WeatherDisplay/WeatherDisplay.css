@@ -2,15 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: lightgray;
   min-height: 200px;
   width: 80%;
   margin: 0 auto;
   margin-bottom: 40px;
 }
-
-.icon {
-
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .temp {
@@ -27,5 +30,5 @@
 }
 
 .weather-summary{
-
+  font-size: 1.2em;
 }
