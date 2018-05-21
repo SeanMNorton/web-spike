@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "node-fetch": "^2.1.2",
+    "nodemon": "^1.17.4",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
@@ -10,8 +16,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "foreman start -f Procfile.dev",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "touch .env.development && echo REACT_APP_DARK_SKY_API_KEY='YOUR_KEY' >> .env.development && echo REACT_APP_GOOGLE_API_KEY='YOUR_KEY' >> .env.development"
   }
 }
