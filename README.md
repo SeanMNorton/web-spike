@@ -7,6 +7,10 @@ A web application that accesses DarkSky's API and Google Geocoder to provide the
 
 ### Prerequisites
 
+Sign up for a DarkSky API account [HERE](https://darksky.net/dev)
+
+Sign up for a Google API and enable the Geocoder API
+
 Make sure you have node and npm installed
 
 ```

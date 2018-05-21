@@ -20,6 +20,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "postinstall": "touch .env.development && echo "REACT_APP_DARK_SKY_API_KEY=''" >> .env.development && echo "REACT_APP_GOOGLE_API_KEY=''" >> .env.development"
+    "postinstall": "touch .env.development && echo REACT_APP_DARK_SKY_API_KEY='YOUR_KEY' >> .env.development && echo REACT_APP_GOOGLE_API_KEY='YOUR_KEY' >> .env.development"
   }
 }
