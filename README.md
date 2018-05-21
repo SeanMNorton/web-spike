@@ -23,6 +23,7 @@ npm --version
 1. Git clone or download this repository
 2. `cd web-spike`
 3. `npm install`
+4. Add your API keys into the .env.development file. Make sure the keys are surrounded by quotations.
 
 ## Deployment
 
